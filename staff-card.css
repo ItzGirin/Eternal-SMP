@@ -1,0 +1,131 @@
+    @font-face {
+    font-family: 'Minecrafter';
+    src: url('Minecrafter.Alt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.staff-card {
+    width: calc(50% - 16px);
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    font-family: 'Minecrafter', Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    box-sizing: border-box;
+    /* flex-shrink: 0; removed to allow shrinking */
+}
+
+@media (max-width: 600px) {
+    .staff-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Remove horizontal scroll and snap */
+    #staff-card .container > div.flex {
+        flex-wrap: wrap !important;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+        gap: 16px !important;
+        padding-bottom: 0 !important;
+    }
+    #staff-card .container > div.flex > .staff-card {
+        margin: 8px 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        scroll-snap-align: none !important;
+        flex-shrink: 1 !important;
+    }
+    #staff-card .container > div.flex > .staff-card img {
+        width: 60% !important;
+        max-width: 100px !important;
+        height: auto !important;
+    }
+}
+
+/* Global box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.staff-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7); /* yellow glow effect */
+}
+
+.large-staff-card {
+    width: 280px;
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    font-family: 'Minecrafter', Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 330px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.large-staff-card img {
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Responsive layout for mobile view: horizontal scroll with one card visible */
+@media (max-width: 768px) {
+    #staff-card .container > div.flex {
+        flex-direction: row !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    #staff-card .container > div.flex > .staff-card {
+        margin: 0 5px;
+        width: 80vw !important;
+        height: auto !important;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+    #staff-card .container > div.flex > .staff-card img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+footer.bg-fifth {
+    border: none;
+    border-top: 4px solid yellow;
+    box-shadow: none;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
