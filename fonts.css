@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Nexa Bold';
+  src: url('  ') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-nexabold {
+  font-family: 'Nexa Bold', Arial, sans-serif;
+  font-weight: bold;
+}

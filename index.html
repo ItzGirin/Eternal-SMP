@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EternalSMP - Premium Minecraft Experience</title>
+    <link rel="icon" type="image/png" href="/logo tulisan eternal.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/animation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Style Loading Screen */
+        body {  
+            background-color: #1e1e1e;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .loading-animation {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .pixel-loader {
+            width: 150px; /* Increased size */
+            height: 150px;
+            background-image: url('/logo-eternal-remove.png'); /* Path ke gambar */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 15px;
+            /* filter: drop-shadow(0 0 8px #ffff00); Removed yellow glow */
+            /* Alternatively, use box-shadow for glow */
+            /* box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7); */
+        }
+        .tab-btn {
+            color: white;
+            border: 1px solid #444444; /* dark gray border */
+            padding: 5px 10px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        /* Search Bar Styles */
+        .search-container {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 20px;
+          justify-content: center;
+        }
+
+        .search-input, .search-select {
+          padding: 12px 16px;
+          border: 1px solid #d4af37; /* Gold border */
+          background-color: #1e1e1e;
+          color: #f5f5f5;
+          font-family: 'Georgia', serif;
+          border-radius: 4px;
+          font-size: 18px;
+          width: 300px;
+        }
+
+        .search-input::placeholder {
+          color: #aaa;
+        }
+
+        .search-input:focus, .search-select:focus {
+          outline: none;
+          box-shadow: 0 0 5px #d4af37;
+          border-color: #f0c14b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation" style="width: 100vw; height: 100vh; margin: 0; padding: 0;">
+            <video autoplay loop muted playsinline style="width: 100vw; height: 100vh; object-fit: cover;">
+                <source src="/opening.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="parallax-bg" style="position: relative; overflow: hidden;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+            <source src="/Lading2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="header-content fade-in">
+                <h1 class="logo glitch" data-text="EternalSMP">EternalSMP</h1>
+                <p class="tagline">Where Legends Are Forged</p>
+                <a href="#join" class="server-ip pulse">play.eternalsmp.net | 1.20.80</a>
+            </div>
+        </div>
+        <div class="scroll-indicator bounce" style="position: relative; z-index: 1;">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">EternalSMP</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#history"><i class="fas fa-scroll"></i> History</a></li>
+                <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                <li><a href="#features"><i class="fas fa-crown"></i> Features</a></li>
+                <li><a href="#addons"><i class="fas fa-puzzle-piece"></i> Wiki</a></li>
+                <li><a href="#rules"><i class="fas fa-gavel"></i> Rules</a></li>
+                <li><a href="#join" class="nav-cta">Join Now</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- History Section -->
+        <section id="history" class="section">
+            <h2 class="section-title"><span>Historical</span></h2>
+            <div class="history-content card-hover">
+                <div class="timeline">
+                    <div class="timeline-item slide-in">
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content">
+                            <h3>The Founding</h3>
+                            <p>EternalSMP terbuat karena ReynaryPE selaku founder merasa dendam terhadap perlakuan admin di server tempatnya dahulu</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item slide-in">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>theme Majority</h3>
+                            <p>Main theme : medieval, steampunk, modern</p>
+                            <p>Sub theme : fantasy, gothic, Renaissance, apocalypse, adventure, colonialism</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item slide-in">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>New Era</h3>
+                            <p>EternalSMP Season 14 merupakan era baru yang tidak pernah ada di eternal sebelumnya dengan konsep-konsep yang lebih kompleks dari season sebelumnya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Section -->
+        <section id="community" class="section">
+            <h2 class="section-title"><span>Our Noble Community</span></h2>
+            <div class="community-grid">
+                <a href="staff.html" class="community-card card-hover" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="community-icon">
+                        <i class="fas fa-crown gold-icon"></i>
+                    </div>
+                    <h3>Staff</h3>
+                    <p>Our experienced staff team ensures fair play and organizes regular events.</p>
+                    <div class="player-showcase">
+                        <span class="player-head" data-tooltip="MarceliaLE"></span>
+                        <span class="player-head" data-tooltip="MarcelloLE"></span>
+                        <span class="player-head" data-tooltip="Schmitzealgi"></span>
+                    </div>
+                </a>
+                
+                <div class="community-card card-hover">
+                    <div class="community-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3>Guilds</h3>
+                    <p>Terdapat 2 faksi yang aktif dan saling bersaing untuk menjadi dominan di dunia yang penuh wabah.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                        <span>Season Progress: 91%</span>
+                    </div>
+                </div>
+                
+                <div class="community-card card-hover">
+                    <div class="community-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Events</h3>
+                    <p>Turnamen mingguan, Festival bulanan, Perayaan musiman</p>
+                    <div class="event-countdown">
+                        Next Event: <span id="next-event">1d 12h</span>
+                    </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2 class="section-title"><span>Main Features</span></h2>
+            <div class="feature-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="gameplay">Gameplay</button>
+                    <button class="tab-btn" data-tab="economy">Economy</button>
+                    <button class="tab-btn" data-tab="world">World</button>
+                </div>
+                
+                <div class="tab-content active" id="gameplay">
+                    <div class="feature-highlight">
+                        <div class="feature-preview">
+                            <div class="minecraft-window">
+                                <video width="640" height="360" controls>
+                                    <source src="Gelud.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            <h3>⚔️ Enhanced Survival</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> ⬆️ System Leveling</li>
+                                <li><i class="fas fa-check"></i> 🎖️ Achievement Medals</li>
+                                <li><i class="fas fa-check"></i> ⚙️ Custom mobs</li>
+                                <li><i class="fas fa-check"></i> 📖 Seasonal events and storylines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="economy">
+                    <!-- Economy content would go here -->
+                </div>
+                
+                <div class="tab-content" id="world">
+                    <!-- World content would go here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Addons Section -->
+        <section id="addons" class="section">
+            <h2 class="section-title"><span>Royal Decrees</span></h2>
+            <div class="search-container">
+                <input type="text" class="search-input" id="addon-search" placeholder="Search addons...">
+                <select class="search-select" id="addon-category">
+                    <option value="all">All Categories</option>
+                    <option value="gameplay">Gameplay</option>
+                    <option value="visual">Visual</option>
+                    <option value="economy">Economy</option>
+                    <option value="utility">Utility</option>
+                </select>
+            </div>
+            <div class="addons-grid" id="addons-grid">
+                <!-- Addons will be loaded via JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Rules Section -->
+        <section id="rules" class="section">
+            <h2 class="section-title"><span>Royal Decrees</span></h2>
+            <div class="rules-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>Article I: Code of Chivalry</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>All knights and nobles shall conduct themselves with honor. Griefing, stealing, or cheating shall be punishable by exile.</p>
+                    </div>
+                </div>
+                <!-- More accordion items would go here -->
+            </div>
+        </section>
+        
+        <!-- Join Section -->
+        <section id="join" class="section">
+            <h2 class="section-title"><span>Join the Kingdom</span></h2>
+            <div class="join-container">
+                <div class="server-status card-hover">
+                    <h3>Server Status</h3>
+                    <div class="status-indicator online">
+                        <span class="status-dot"></span>
+                        Online (48/100)
+                    </div>
+                    <div class="server-stats">
+                        <div class="stat">
+                            <span>Uptime</span>
+                            <strong>99.8%</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Season</span>
+                            <strong>III</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Version</span>
+                            <strong>1.20.1</strong>
+                        </div>
+                    </div>
+                    <div class="server-actions">
+                        <button class="copy-ip" data-ip="play.eternalsmp.net">
+                            <i class="fas fa-copy"></i> Copy IP
+                        </button>
+                        <a href="#" class="discord-join">
+                            <i class="fab fa-discord"></i> Join Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="player-testimonials card-hover">
+                    <h3>Voices of the Realm</h3>
+                    <div class="testimonial-slider">
+                        <!-- Testimonials would be loaded via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">EternalSMP</h3>
+                    <p>The premier medieval Minecraft experience</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Server</h4>
+                        <ul>
+                            <li><a href="#history">History</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#rules">Rules</a></li>
+                            <li><a href="#join">Join</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EternalSMP. All rights reserved.</p>
+                <p>Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
