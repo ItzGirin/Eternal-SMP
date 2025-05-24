@@ -12,7 +12,7 @@ body.no-scroll::-webkit-scrollbar {
 /* Custom background for Join the Kingdom section */
 #join {
   position: relative;
-  background-image: url('/member3.png'); /* Replace with your image path */
+  background-image: url('/member.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

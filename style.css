@@ -16,6 +16,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    .glow-line {
+        height: 2px;
+        width: 100%;
+        background: #ffd700;
+        box-shadow:
+            0 0 10px #ffd700,
+            0 0 20px #ffc107,
+            0 0 30px #ffea00,
+            0 0 40px #ffea00;
+        margin: 20px 0;
+    }
+    
+    
 }
 
 body {
