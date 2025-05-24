@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     // Loading screen
     setTimeout(function() {
         const loadingScreen = document.querySelector('.loading-screen');
@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove loading screen after transition duration (500ms)
             setTimeout(() => {
                 loadingScreen.remove();
+                // Re-enable scrolling after loading screen is removed
+                document.body.classList.remove('no-scroll');
             }, 500);
         }
     }, 2000);

@@ -1,0 +1,100 @@
+/* Disable scrolling and hide scrollbar when no-scroll class is added to body */
+body.no-scroll {
+  overflow: hidden;
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+body.no-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Custom background for Join the Kingdom section */
+#join {
+  position: relative;
+  background-image: url('/member3.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px 0; /* Remove horizontal padding to extend background */
+  z-index: 0;
+  overflow: hidden;
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Center full width section */
+  text-shadow: none; /* Remove previous text shadow */
+  font-size: 0.9rem; /* Smaller font size for server status */
+  /* Add transparent gradient overlay to blend with background */
+}
+#join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30, 0) 20%, rgba(30, 30, 30, 0) 80%, rgba(30, 30, 30, 0.8) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.server-status {
+    background-color: rgba(18, 18, 18, 0.6); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 20px 15px; /* Adjusted padding for tidier look */
+    text-align: center;
+    width: 600px; /* Further increased width */
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 0 auto 20px auto; /* Center and add bottom margin */
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Optional: add blur for better blending */
+}
+
+.server-status h3 {
+    color: var(--gold);
+    margin-bottom: 12px; /* Adjusted margin */
+    font-size: 1.3rem; /* Slightly larger heading */
+}
+
+.player-testimonials {
+    background-color: rgba(18, 18, 18, 0.6); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 20px 15px; /* Adjusted padding for tidier look */
+    width: 400px; /* Increased width */
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 0 auto 20px auto; /* Center and add bottom margin */
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Optional: add blur for better blending */
+}
+
+#join > .section-title {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.5rem; /* Smaller heading */
+}
+
+#join > .section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+#join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0.95) 100%);
+  z-index: -1;
+}
