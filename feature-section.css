@@ -1,0 +1,37 @@
+.feature-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #1e1e1e; /* dark background */
+  color: white;
+  font-family: 'Minecraft', monospace, Arial, sans-serif; /* add your pixel font */
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.7); /* gold glow */
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature-list ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  max-width: 400px;
+}
+
+.feature-list ul li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+}
