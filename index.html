@@ -113,6 +113,14 @@
             <p class="loading-text">Loading EternalSMP World...</p>
         </div>
     </div>
+    <script>
+        window.addEventListener("load", function() {
+            const loadingScreen = document.querySelector(".loading-screen");
+            if (loadingScreen) {
+                loadingScreen.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
 
