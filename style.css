@@ -219,6 +219,44 @@ nav {
     border-color: var(--gold-dark);
 }
 
+/* Staff Cards Grid */
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Staff Card */
+.community-card {
+    background-color: #2f4f2f; /* dark green */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Staff Member Image */
+.community-card img {
+    border: 3px solid #d4af37; /* gold */
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px #d4af37; /* glowing effect */
+    max-width: 150px;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+/* Staff Member Name */
+.community-card h3 {
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 /* Timeline */
 .timeline {
     position: relative;
@@ -743,6 +781,12 @@ footer {
     
     .nav-links li {
         margin: 5px 15px;
+    }
+    
+    .nav-cta {
+        margin-left: 0 !important;
+        padding: 8px 15px !important;
+        font-size: 0.9rem !important;
     }
     
     .footer-content {

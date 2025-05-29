@@ -3,116 +3,135 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EternalSMP | History</title>
-    <link rel="icon" type="image/png" href="logo tulisan eternal.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css" />
-    <link rel="stylesheet" href="scroll-control.css" />
+    <title>EternalSMP - Premium Minecraft Experience</title>
+    <link rel="icon" type="image/png" href="/logo tulisan eternal.png" />
+    <link rel="stylesheet" href="css/style.css/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="/scroll-control.css" />
+    <link rel="stylesheet" href="/animation.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="css/animations.css/animations.css" />
+
     <style>
-        /* Style Loading Screen */
-        body {  
+        body {
             background-color: #1e1e1e;
             color: white;
             font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Changed overflow from hidden to auto to enable scrolling */
+            overflow: auto;
         }
+
         .loading-screen {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
-        }
-        .loading-animation {
             text-align: center;
+        }
+
+        .loading-animation {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
-        }
-        .pixel-loader {
-            width: 150px; /* Increased size */
-            height: 150px;
-            background-image: url('/logo-eternal-remove.png'); /* Path ke gambar */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-bottom: 15px;
-            /* filter: drop-shadow(0 0 8px #ffff00); Removed yellow glow */
-            /* Alternatively, use box-shadow for glow */
-            /* box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7); */
-        }
-        .tab-btn {
-            color: white;
-            border: 1px solid #444444; /* dark gray border */
-            padding: 5px 10px;
-            background: transparent;
-            cursor: pointer;
         }
 
-        /* Search Bar Styles */
+        .logo-loader {
+            width: 240px;
+            height: 240px;
+            background-image: url('/logo-eternal-remove.png'); /* Pastikan ini PNG transparan */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: pulse 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px #d4af37);
+            margin-bottom: 20px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.85; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .loading-text {
+            font-size: 20px;
+            color: #ccc;
+            animation: fadeIn 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* New styles for search bar */
         .search-container {
-          display: flex;
-          gap: 8px;
-          margin-bottom: 20px;
-          justify-content: center;
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            justify-content: center;
         }
 
         .search-input, .search-select {
-          padding: 12px 16px;
-          border: 1px solid #d4af37; /* Gold border */
-          background-color: #1e1e1e;
-          color: #f5f5f5;
-          font-family: 'Georgia', serif;
-          border-radius: 4px;
-          font-size: 18px;
-          width: 300px;
+            padding: 12px 16px;
+            border: 1px solid #d4af37; /* Gold border */
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+            font-family: 'Georgia', serif;
+            border-radius: 4px;
+            font-size: 18px;
+            width: 300px;
         }
 
         .search-input::placeholder {
-          color: #aaa;
+            color: #aaa;
         }
 
         .search-input:focus, .search-select:focus {
-          outline: none;
-          box-shadow: 0 0 5px #d4af37;
-          border-color: #f0c14b;
+            outline: none;
+            box-shadow: 0 0 5px #d4af37;
+            border-color: #f0c14b;
         }
     </style>
 </head>
-<body class="no-scroll">
-    <!-- Loading Screen -->
+<body>
     <div class="loading-screen">
-        <div class="loading-animation" style="width: 100vw; height: 100vh; margin: 0; padding: 0;">
-<video autoplay loop muted playsinline style="width: 100vw; height: 100vh; object-fit: cover;">
-    <source src="opening1mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-</video>
+        <div class="loading-animation">
+            <div class="logo-loader"></div>
+            <p class="loading-text">Loading EternalSMP World...</p>
         </div>
     </div>
+</body>
+</html>
 
-    <!-- Header -->
-    <header class="parallax-bg" style="position: relative; overflow: hidden;">
-        <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-            <source src="/LOADING.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="header-content fade-in">
-                <h1 class="logo glitch" data-text="EternalSMP">EternalSMP</h1>
-                <p class="tagline">Where Legends Are Forged</p>
-                <a href="#join" class="server-ip pulse">play.eternalsmp.net | 1.20.80</a>
-            </div>
+
+ <!-- Header -->
+ <header class="parallax-bg" style="position: relative; overflow: hidden;">
+<video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+        <source src="LOADING.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="header-content fade-in">
+            <h1 class="logo glitch" data-text="EternalSMP">EternalSMP</h1>
+            <p class="tagline">Where Legends Are Forged</p>
+            <a href="#join" class="server-ip pulse">play.eternalsmp.net | 1.20.80</a>
         </div>
-        <div class="scroll-indicator bounce" style="position: relative; z-index: 1;">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </header>
-    
+    </div>
+    <div class="scroll-indicator bounce" style="position: relative; z-index: 1;">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</header>
+
     <!-- Navigation -->
     <nav id="main-nav">
         <div class="container nav-container">
@@ -128,6 +147,7 @@
                 <li><a href="#features"><i class="fas fa-crown"></i> Features</a></li>
                 <li><a href="#addons"><i class="fas fa-puzzle-piece"></i> Wiki</a></li>
                 <li><a href="#rules"><i class="fas fa-gavel"></i> Rules</a></li>
+                <li><a href="/staff.html" class="nav-cta"><i class="fas fa-user-shield" style="margin-right: 3px;"></i>Staff</a></li>
                 <li><a href="#join" class="nav-cta">Join Now</a></li>
             </ul>
         </div>
@@ -146,7 +166,6 @@
                             <h3>The Founding</h3>
                             <p>EternalSMP terbuat karena ReynaryPE selaku founder merasa dendam terhadap perlakuan admin di server tempatnya dahulu</p>
                         </div>
-                    </div>
                     <div class="timeline-item slide-in">
                         <div class="timeline-date">2024</div>
                         <div class="timeline-content">
@@ -154,22 +173,18 @@
                             <p>Main theme : medieval, steampunk, modern</p>
                             <p>Sub theme : fantasy, gothic, Renaissance, apocalypse, adventure, colonialism</p>
                         </div>
-                    </div>
                     <div class="timeline-item slide-in">
                         <div class="timeline-date">2025</div>
                         <div class="timeline-content">
                             <h3>New Era</h3>
                             <p>EternalSMP Season 14 merupakan era baru yang tidak pernah ada di eternal sebelumnya dengan konsep-konsep yang lebih kompleks dari season sebelumnya</p>
                         </div>
-                    </div>
-                </div>
-            </div>
         </section>
         
         <!-- Community Section -->
         <section id="community" class="section">
             <h2 class="section-title"><span>Our Noble Community</span></h2>
-            <div class="community-grid">
+            <div class="community-grid grid grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <a href="staff.html" class="community-card card-hover" style="text-decoration: none; color: inherit; display: block;">
                     <div class="community-icon">
                         <i class="fas fa-crown gold-icon"></i>
@@ -177,10 +192,7 @@
                     <h3>Staff</h3>
                     <p>Ada banyak staff yang siap membantu kalian dengan senang hati !</p>
                     <div class="player-showcase">
-                 
-                        
                         <span class="player-head" data-tooltip="MarceliaLE"></span>
-                
                         <span class="player-head" data-tooltip="MarcelloLE"></span>
                         <span class="player-head" data-tooltip="Schmitzealgi"></span>
                     </div>
@@ -200,13 +212,17 @@
                 
                 <div class="community-card card-hover">
                     <div class="community-icon">
-                        <i class="fas fa-calendar-alt"></i>
+                        <a href="https://discord.com/invite/BhPJcs8S" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" style="color: #d4af37;"></i></a>
+                        <a href="https://www.youtube.com/@eternalsmpserver" rel="noopener noreferrer"><i class="fab fa-youtube" style="color: #d4af37;"></i></a>
+                        <a href="https://www.instagram.com/eternalsmp" rel="noopener noreferrer"><i class="fab fa-instagram" style="color: #d4af37;"></i></a>
+                        <a href="https://www.tiktok.com/@eternalsmpserver" rel="noopener noreferrer"><i class="fab fa-tiktok" style="color: #d4af37;"></i></a>
                     </div>
-                    <h3>Events</h3>
-                    <p>Turnamen mingguan, Festival bulanan, Perayaan musiman</p>
-                    <div class="event-countdown">
-                        Next Event: <span id="next-event">1d 12h</span>
+                    <h3>Kontak Kami</h3>
+                    <div class="social-links">
+                        <span>Klik Icon untuk mendapatkan berbagai informasi mengenai komunitas kami!</span>
                     </div>
+                </div>
+            </div>
         </section>
         
         <!-- Features Section -->
@@ -215,7 +231,7 @@
             <div class="feature-tabs">
                 <div class="tab-buttons">
                     <button class="tab-btn active" data-tab="gameplay">Gameplay</button>
-                    <button class="tab-btn" data-tab="economy">Economy</button>
+                    <button class="tab-btn" data-tab="economy"></button>
                     <button class="tab-btn" data-tab="world">World</button>
                 </div>
                 
@@ -224,7 +240,7 @@
                         <div class="feature-preview">
                             <div class="minecraft-window">
                                 <video width="640" height="360" controls>
-                                    <source src="Gelud.mp4" type="video/mp4">
+                                    <source src="" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -251,35 +267,64 @@
             </div>
         </section>
         
-        <!-- Addons Section -->
-        <section id="addons" class="section">
-            <h2 class="section-title"><span>Royal Decrees</span></h2>
-            <div class="search-container">
-                <input type="text" class="search-input" id="addon-search" placeholder="Search addons...">
-                <select class="search-select" id="addon-category">
+        <!-- Wiki Server Section -->
+        <h2 class="section-title"><span>Wiki</span></h2>
+        <div class="search-container">
+            <input type="text" class="search-input" id="addon-search" placeholder="Search addons...">
+            <select class="search-select" id="addon-category">
                     <option value="all">All Categories</option>
                     <option value="gameplay">Gameplay</option>
                     <option value="visual">Visual</option>
-                    <option value="economy">Economy</option>
                     <option value="utility">Utility</option>
                 </select>
             </div>
             <div class="addons-grid" id="addons-grid">
-                <!-- Addons will be loaded via JavaScript -->
+                <!-- Wiki Server will be loaded via JavaScript -->
             </div>
         </section>
         
         <!-- Rules Section -->
         <section id="rules" class="section">
-            <h2 class="section-title"><span>Royal Decrees</span></h2>
+            <h2 class="section-title"><span>Rules Server</span></h2>
             <div class="rules-accordion">
                 <div class="accordion-item">
                     <button class="accordion-btn">
-                        <span>Article I: Code of Chivalry</span>
+                        <span>Article I: Do & Don't</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="accordion-content">
-                        <p>All knights and nobles shall conduct themselves with honor. Griefing, stealing, or cheating shall be punishable by exile.</p>
+                        <p></p>
+                            <ol>
+                                <li>Saling menghormati satu sama lain</li>
+                                <li>Diwajibkan memiliki <span class="highlight">Discord</span></li>
+                                <li>Jangan <span class="highlight">baperan</span></li>
+                                <li>Jangan <span class="highlight">rasis, SARA, dan anarkis</span></li>
+                                <li>Jangan <span class="highlight">provokasi</span></li>
+                                <li>Jangan <span class="highlight">membully</span></li>
+                                <li>Jangan promosi dalam bentuk apapun selain tentang <span class="highlight">EternalSMP</span></li>
+                                <li>Jangan kirim stiker <span class="highlight">porn & jomok</span></li>
+                                <li>Jangan <span class="highlight">spam stiker</span></li>
+                                <li>Jangan bahas <span class="highlight">server lain</span></li>
+                                <li>Jangan membahas konten apapun yang mengandung <span class="highlight">18++</span></li>
+                                <li>Jangan membuat <span class="highlight">drama kecil jadi besar</span></li>
+                                <li>Jangan <span class="highlight">toxic berlebihan</span></li>
+                            </ol>
+                    </div>
+                    <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>Article II: Sanksi pelanggaran</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>buat 10 video klarifikasi</p>
+                    </div>
+                    <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>Article III: Cara melaporkan pelanggaran</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Buat video pargoy lalu kirim ke grub wa eternal  </p>
                     </div>
                 </div>
                 <!-- More accordion items would go here -->
@@ -288,7 +333,7 @@
         <div class="glow-line"></div>
         <!-- Join Section -->
         <section id="join" class="section">
-            <h2 class="section-title"><span>Join the Kingdom</span></h2>
+            <h2 class="section-title"><span>Join Now</span></h2>
             <div class="join-container">
                 <div class="server-status card-hover">
                     <h3>Server Status</h3>
@@ -303,7 +348,7 @@
                         </div>
                         <div class="stat">
                             <span>Season</span>
-                            <strong>XIV</strong>
+                            <strong>14</strong>
                         </div>
                         <div class="stat">
                             <span>Version</span>
@@ -314,9 +359,8 @@
                         <button class="copy-ip" data-ip="play.eternalsmp.net">
                             <i class="fas fa-copy"></i> Copy IP
                         </button>
-                        <a href="https://discord.gg/eternalsmp" target="_blank" class="discord-join">
+                        <a href="https://discord.com/invite/BhPJcs8S" class="discord-join">
                             <i class="fab fa-discord"></i> Join Discord
-
                         </a>
                     </div>
                 </div>
@@ -337,24 +381,13 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3 class="footer-logo">EternalSMP</h3>
-                    <p>The premier medieval Minecraft experience</p>
+                    <p>Where Legends Are Forged</p>
                     <div class="social-links">
-                        <!-- Link ke Discord -->
-                        <a href="https://discord.gg/eternalsmp" target="_blank">
-                            <i class="fab fa-discord"></i>
-                        </a>
-                    
-                        <!-- Link ke TikTok -->
-                        <a href="https://www.tiktok.com/@eternalsmpserver" target="_blank">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    
-                        <!-- Link ke YouTube -->
-                        <a href="https://www.youtube.com/@eternalsmpserver" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                        <a href="https://discord.com/invite/BhPJcs8S" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@eternalsmpserver" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/eternalsmp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@eternalsmpserver" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                     </div>
-                    
                 </div>
                 
                 <div class="footer-links">
@@ -381,12 +414,12 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 EternalSMP. All rights reserved.</p>
+                <p>&copy; 2025 EternalSMP. All rights reserved.</p>
                 <p>Not affiliated with Mojang or Microsoft.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js/script.js"></script>
 </body>
 </html>

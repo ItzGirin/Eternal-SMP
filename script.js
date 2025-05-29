@@ -180,14 +180,14 @@
         // Sample testimonials data
         const testimonials = [
             {
-                name: 'KingAether',
+                name: 'Girin24',
                 role: 'Season II Champion',
                 text: 'The most immersive SMP experience I\'ve ever had. The medieval theme and roleplay elements add so much depth.'
             },
             {
                 name: 'LadyBrick',
                 role: 'Master Builder',
-                text: 'The custom building blocks and terrain generation make this server a builder\'s paradise.'
+                text: 'semua member nya sangat ramah\'s paradise.'
             },
             {
                 name: 'SirRedstone',
