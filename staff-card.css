@@ -144,6 +144,67 @@
     border: 1px solid #d4af37;
 }
 
+/* New styles for staff group and members */
+.staff-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Admin group with 2 columns */
+.admin-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.admin-group .staff-member {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    background: #1f1f1f;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+}
+
+@media (max-width: 768px) {
+    .admin-group .staff-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px 10px;
+    }
+    .admin-group .staff-member img {
+        width: 100px;
+        height: 100px;
+    }
+    .admin-group .staff-member h3 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .admin-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    .admin-group .staff-member {
+        padding: 10px 5px;
+    }
+    .admin-group .staff-member img {
+        width: 80px;
+        height: 80px;
+    }
+    .admin-group .staff-member h3 {
+        font-size: 0.9rem;
+    }
+}
+
 footer.bg-fifth {
     border: none;
     border-top: 4px solid yellow;

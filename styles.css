@@ -296,10 +296,13 @@ nav {
 .player-head {
     width: 40px;
     height: 40px;
-    background-color: var(--gray);
-    border-radius: 50%;
-    border: 2px solid var(--gold);
-    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; /* square shape */
+    margin: 8px;
+    border: 3px solid #d4af37; /* gold frame */
+    box-shadow: 0 0 8px #d4af37; /* subtle glow */
     cursor: pointer;
 }
 
@@ -756,6 +759,41 @@ footer {
     }
     
     .server-actions {
-        flex-direction: column;
+           flex-direction: column;
     }
+
+    /* Responsive loading screen adjustments */
+    .loading-screen {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .logo-loader {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 15px;
+    }
+
+    .loading-text {
+        font-size: 14px !important;
+    }
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
 }
