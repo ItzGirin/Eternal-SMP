@@ -171,20 +171,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sample testimonials data
         const testimonials = [
             {
-                name: 'KingAether',
-                role: 'Season II Champion',
-                text: 'The most immersive SMP experience I\'ve ever had. The medieval theme and roleplay elements add so much depth.'
+                name: 'Nohaniel',
+                role: 'Season 13 Player',
+                text: 'Season yang membuat saya memiliki banyak teman, dan di season ini season paling adil, meskipun tidak top up MVP kita bisa mendapatkan item bagus bagus, s13 juga ada beberapa nama baru seperti nohan dan cursed (member yang menonjol), satu satunya season yang membuat saya takut sama zombie dan mob mob lainnya.'
             },
             {
-                name: 'LadyBrick',
-                role: 'Master Builder',
-                text: 'The custom building blocks and terrain generation make this server a builder\'s paradise.'
+                name: 'Miraa',
+                role: 'Season 13 Player',
+                text: 'Cara OP di Eternal SMP sangat mudah yang penting effort dan konsistensi , Adminnya agak ngeselin suka iseng dan ngebully tapi itu yang membuat seru.'
             },
-            {
-                name: 'SirRedstone',
-                role: 'Technical Player',
-                text: 'Perfect balance between vanilla mechanics and quality-of-life improvements. 10/10 would play again.'
-            }
+            
         ];
         
         let currentTestimonial = 0;
